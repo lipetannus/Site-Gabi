@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Lipe&Gabi</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="intro">
+        <h1>Lipe & Gabi 💖</h1>
+        <h1>Estamos juntos há...</h1>
+        <div id="timer">Carregando...</div>
+
+        <script>
+         const startDate = new Date("2022-05-20T21:30:00"); // 🡨 Altere aqui para a data do namoro (AAAA-MM-DD)
+
+            function updateTimer() {
+            const now = new Date();
+            let years = now.getFullYear() - startDate.getFullYear();
+            let months = now.getMonth() - startDate.getMonth();
+            let days = now.getDate() - startDate.getDate();
+            let hours = now.getHours() - startDate.getHours();
+            let minutes = now.getMinutes() - startDate.getMinutes();
+            let seconds = now.getSeconds() - startDate.getSeconds();
+
+            if (seconds < 0) { seconds += 60; minutes--; }
+            if (minutes < 0) { minutes += 60; hours--; }
+            if (hours < 0) { hours += 24; days--; }
+
+            const monthDays = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+            if (days < 0) { days += monthDays; months--; }
+
+            if (months < 0) { months += 12; years--; }
+
+            document.getElementById("timer").innerHTML = `
+                <span>${years}</span> anos,
+                <span>${months}</span> meses,
+                <span>${days}</span> dias,
+                <span>${hours}</span> horas,
+                <span>${minutes}</span> minutos e
+                <span>${seconds}</span> segundos
+            `;
+            }
+
+            setInterval(updateTimer, 1000);
+            updateTimer(); // chama a função assim que a página carregar
+        </script>
+        </div>
+
+
+        <section class="album">
+            <h1 id="album">Nosso Albúm</h1>
+
+            <h3 id="Pedido">💖Pedido de Namoro 20/05/2022💖 </h3>
+            <img src="PedidoNamoro.jpg" class="foto" alt="Foto 1">
+            <img src="Dia1.jpg" class="foto" alt="Foto 2">
+
+            <h3 id="Pedido">💖Um ano de namoro(ou quase) 14/05/2023💖</h3>
+            <img src="PrimeiroAno.jpg" class="foto" alt="Foto 1">
+
+            <h3 id="Pedido">💖Viagem Pro Jalapão - TO 14/07/2023 à 21/07/2023💖</h3>
+            <img src="ViagemJalapao1.jpg" class="foto" alt="Foto 1">
+            <img src="ViagemJalapao3.jpg" class="foto" alt="Foto 2">7
+            <img src="ViagemJalapao2.jpg" class="foto" alt="Foto 3">
+
+            <h3 id="Pedido">💖Viagem Pra Florianópolis - SC 14/01/2024 à 25/01/2024💖</h3>
+            <img src="Floripa1.jpg" class="foto" alt="Foto 1">
+            <img src="Floripa2.jpg" class="foto" alt="Foto 2">
+            <img src="Floripa3.jpg" class="foto" alt="Foto 3">
+            <img src="Floripa4.jpg" class="foto" alt="Foto 4">
+            <img src="Floripa5.jpg" class="foto" alt="Foto 5">
+
+
+            <h3 id="Pedido">💖Dois anos de namoro 20/05/2024💖</h3>
+            <img src="Doisanos.jpg" class="foto" alt="Foto 1">
+            <img src="Doisanos2.jpg" class="foto" alt="Foto 2">
+
+            <h3 id="Pedido">💖Três anos de namoro 20/05/2025💖</h3>
+            <img src="Tresanos1.jpg" class="foto" alt="Foto 1">
+            <img src="Tresanos2.jpg" class="foto" alt="Foto 2">
+            <img src="Tresanos3.jpg" class="foto" alt="Foto 3">
+            
+            
+        </section>
+    </body>
+
+</html>

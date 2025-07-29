@@ -1,0 +1,84 @@
+h1 {
+    color: rgba(133, 9, 158, 0.86);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff0f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      color: #444;
+      margin: 0;
+      background-image: url('sua-imagem.png'); /* substitua pelo nome do arquivo */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed; /* fundo fica parado mesmo com scroll */
+      background-size: cover;
+      opacity: 0.97; /* leve transparência */
+    }
+
+    .intro {
+      min-height: 100vh; /* ocupa toda a altura da tela */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      margin-bottom: 20px;
+      color: #e91e63;
+    }
+
+    h2 {
+      font-family: 'Dancing Script', cursive;
+      color: #75062b;
+    }
+
+    #timer {
+      font-size: 1.5em;
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    span {
+      font-weight: bold;
+      color: #e91e63;
+    }
+    .foto {
+      width: 250px;
+      height: auto;
+      border: 10px solid white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transform: rotate(-3deg);
+      transition: transform 0.3s ease;
+    }
+
+    .foto:nth-child(2) {
+      transform: rotate(4deg);
+    }
+
+    .foto:hover {
+      transform: rotate(0deg) scale(1.05);
+      z-index: 10;
+    }
+
+    #Pedido{
+      margin-top: 40px;
+    }
+
+    #album{
+      margin-top: 40px;
+    }
